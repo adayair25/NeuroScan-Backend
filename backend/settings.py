@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders', # Add this line
     'rest_framework', # Add this line
     'rest_framework_simplejwt', # Add this line
     'oauth', # Add this line
@@ -60,6 +61,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    #'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4321",
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
 ]
 
 ROOT_URLCONF = 'backend.urls'

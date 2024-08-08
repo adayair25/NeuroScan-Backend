@@ -65,13 +65,9 @@ MIDDLEWARE = [
     #'django.middleware.common.CommonMiddleware',
 ]
 
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4321",
-]
-
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
 ]
 
 ROOT_URLCONF = 'backend.urls'

@@ -70,7 +70,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4321",
-    'https://neuro-scan.vercel.app/'
+    "https://neuro-scan.vercel.app",
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -155,7 +155,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-CSRF_TRUSTED_ORIGINS = ['neuroscan-backend.railway.internal']
+CSRF_TRUSTED_ORIGINS = ['https://neuroscan-backend.railway.internal']
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

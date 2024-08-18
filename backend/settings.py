@@ -70,6 +70,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4321",
+    'https://neuro-scan.vercel.app/'
 ]
 
 ROOT_URLCONF = 'backend.urls'

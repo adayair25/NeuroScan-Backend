@@ -19,9 +19,9 @@ class ModelYolo(APIView):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.model = YOLO('/home/adayair_25/Code/Django-NeuroScan/model/best.onnx')
+        self.model = YOLO('model/best.onnx')
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
         try:
             file_obj = request.data['file']
             image = Image.open(file_obj).convert('RGB')

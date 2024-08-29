@@ -3,8 +3,6 @@ from django.urls import path
 from oauth.views import UserAPI, LoginAPI
 from model.views import ModelYolo
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', UserAPI.as_view(), name='users'), # Add this line

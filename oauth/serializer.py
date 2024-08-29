@@ -7,6 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['username', 'email', 'password']
         extra_kwargs = {
             'password': {'write_only': True},
+            'username': {'required': True},
             'email': {'required': True}
         }
         permissions_classes = [permissions.AllowAny]
